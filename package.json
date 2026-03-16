@@ -1,0 +1,18 @@
+{
+  "name": "mindos",
+  "version": "1.0.0",
+  "description": "MindOS — A browser-based personal operating system for developers",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "keywords": ["webos", "personal-os", "second-brain"],
+  "author": "Sid",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^5.8.0",
+    "vite": "^6.3.0"
+  }
+}

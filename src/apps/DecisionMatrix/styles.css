@@ -1,0 +1,261 @@
+/* ========================================
+   DecisionMatrix — Styles
+   ======================================== */
+
+.decision-matrix {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  gap: 16px;
+}
+
+.dm-steps {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.dm-step-indicator {
+  padding: 6px 14px;
+  font-size: 12px;
+  font-weight: 500;
+  border-radius: var(--radius-sm);
+  background: var(--bg-window);
+  color: var(--text-tertiary);
+  border: 1px solid var(--border);
+  transition: all 0.2s;
+}
+
+.dm-step-indicator.active {
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+}
+
+.dm-step-indicator.completed {
+  background: var(--accent-glow);
+  color: var(--accent);
+  border-color: var(--accent-soft);
+}
+
+.dm-step-content {
+  flex: 1;
+  overflow-y: auto;
+}
+
+/* Step 1 — Question */
+
+.dm-question-input {
+  width: 100%;
+  padding: 14px;
+  background: var(--bg-window);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--text-primary);
+  transition: border-color 0.2s;
+}
+
+.dm-question-input:focus {
+  border-color: var(--accent-soft);
+}
+
+.dm-question-input::placeholder {
+  color: var(--text-tertiary);
+}
+
+/* Step 2 — Options & Criteria */
+
+.dm-add-row {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.dm-add-input {
+  flex: 1;
+  padding: 10px 12px;
+  background: var(--bg-window);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  font-size: 13px;
+  color: var(--text-primary);
+  transition: border-color 0.2s;
+}
+
+.dm-add-input:focus {
+  border-color: var(--accent-soft);
+}
+
+.dm-add-input::placeholder {
+  color: var(--text-tertiary);
+}
+
+.dm-add-btn {
+  padding: 10px 16px;
+  background: var(--accent);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 600;
+  border-radius: var(--radius-sm);
+  transition: background 0.15s;
+}
+
+.dm-add-btn:hover {
+  background: #5B54E8;
+}
+
+.dm-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.dm-list-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 12px;
+  background: var(--bg-window);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  font-size: 13px;
+  color: var(--text-primary);
+}
+
+.dm-list-item-name {
+  flex: 1;
+}
+
+.dm-weight-slider {
+  width: 80px;
+  accent-color: var(--accent);
+}
+
+.dm-weight-label {
+  font-size: 11px;
+  font-family: 'JetBrains Mono', monospace;
+  color: var(--text-secondary);
+  min-width: 20px;
+  text-align: right;
+}
+
+.dm-remove-btn {
+  color: var(--text-tertiary);
+  font-size: 14px;
+  cursor: pointer;
+  transition: color 0.15s;
+  padding: 2px 6px;
+}
+
+.dm-remove-btn:hover {
+  color: var(--danger);
+}
+
+/* Step 3 — Scoring Grid */
+
+.dm-grid-container {
+  overflow-x: auto;
+}
+
+.dm-grid {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.dm-grid th {
+  padding: 8px 10px;
+  background: var(--bg-window);
+  color: var(--text-secondary);
+  font-weight: 500;
+  text-align: center;
+  border: 1px solid var(--border);
+  font-size: 11px;
+  white-space: nowrap;
+}
+
+.dm-grid td {
+  padding: 6px 8px;
+  border: 1px solid var(--border);
+  text-align: center;
+}
+
+.dm-grid td:first-child {
+  text-align: left;
+  font-weight: 500;
+  color: var(--text-primary);
+  background: var(--bg-window);
+}
+
+.dm-score-input {
+  width: 48px;
+  padding: 4px;
+  text-align: center;
+  background: var(--bg-window);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  color: var(--text-primary);
+  font-size: 13px;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.dm-score-input:focus {
+  border-color: var(--accent);
+}
+
+.dm-total-cell {
+  font-weight: 600;
+  color: var(--accent);
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.dm-recommendation {
+  margin-top: 12px;
+  padding: 12px 16px;
+  background: var(--accent-glow);
+  border: 1px solid var(--accent-soft);
+  border-radius: var(--radius-md);
+  color: var(--accent);
+  font-size: 14px;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* Navigation Buttons */
+
+.dm-nav {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 12px;
+  border-top: 1px solid var(--border);
+}
+
+.dm-nav-btn {
+  padding: 8px 20px;
+  font-size: 13px;
+  font-weight: 500;
+  border-radius: var(--radius-sm);
+  transition: all 0.15s;
+}
+
+.dm-nav-btn.primary {
+  background: var(--accent);
+  color: #fff;
+}
+
+.dm-nav-btn.primary:hover {
+  background: #5B54E8;
+}
+
+.dm-nav-btn.secondary {
+  background: var(--bg-window);
+  color: var(--text-secondary);
+  border: 1px solid var(--border);
+}
+
+.dm-nav-btn.secondary:hover {
+  border-color: var(--accent-soft);
+  color: var(--text-primary);
+}

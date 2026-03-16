@@ -1,0 +1,189 @@
+/* ========================================
+   MoodLog — Styles
+   ======================================== */
+
+.mood-log {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  gap: 20px;
+  align-items: center;
+}
+
+/* Mood Buttons */
+
+.mood-buttons {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.mood-btn {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  cursor: pointer;
+  transition: all 0.2s;
+  border: 2px solid transparent;
+  position: relative;
+}
+
+.mood-btn:hover {
+  transform: scale(1.15);
+}
+
+.mood-btn.selected {
+  border-color: #fff;
+  transform: scale(1.1);
+  box-shadow: 0 0 20px rgba(255,255,255,0.15);
+}
+
+.mood-btn[data-mood="1"] { background: #FF6363; }
+.mood-btn[data-mood="2"] { background: #FFB347; }
+.mood-btn[data-mood="3"] { background: #FFD663; }
+.mood-btn[data-mood="4"] { background: #63FFAA; }
+.mood-btn[data-mood="5"] { background: #6C63FF; }
+
+.mood-label {
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 9px;
+  font-weight: 500;
+  color: var(--text-tertiary);
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.15s;
+}
+
+.mood-btn:hover .mood-label,
+.mood-btn.selected .mood-label {
+  opacity: 1;
+}
+
+/* Note Input */
+
+.mood-note-row {
+  display: flex;
+  gap: 8px;
+  width: 100%;
+  max-width: 360px;
+}
+
+.mood-note-input {
+  flex: 1;
+  padding: 10px 14px;
+  background: var(--bg-window);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  font-size: 13px;
+  color: var(--text-primary);
+  transition: border-color 0.2s;
+}
+
+.mood-note-input:focus {
+  border-color: var(--accent-soft);
+}
+
+.mood-note-input::placeholder {
+  color: var(--text-tertiary);
+}
+
+.mood-log-btn {
+  padding: 10px 20px;
+  background: var(--accent);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+  border-radius: var(--radius-sm);
+  transition: background 0.15s;
+}
+
+.mood-log-btn:hover {
+  background: #5B54E8;
+}
+
+.mood-log-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Chart */
+
+.mood-chart-container {
+  width: 100%;
+  max-width: 400px;
+  height: 140px;
+  position: relative;
+}
+
+.mood-chart-canvas {
+  width: 100%;
+  height: 100%;
+}
+
+/* Patterns Text */
+
+.mood-patterns {
+  width: 100%;
+  max-width: 360px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.mood-pattern-item {
+  font-size: 12px;
+  color: var(--text-secondary);
+  padding: 8px 12px;
+  background: var(--bg-window);
+  border-radius: var(--radius-sm);
+  border-left: 3px solid var(--accent);
+  line-height: 1.5;
+}
+
+/* Recent Entries */
+
+.mood-recent {
+  width: 100%;
+  max-width: 360px;
+}
+
+.mood-recent-title {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--text-tertiary);
+  margin-bottom: 8px;
+}
+
+.mood-recent-entries {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  max-height: 120px;
+  overflow-y: auto;
+}
+
+.mood-entry-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 8px;
+  font-size: 12px;
+  color: var(--text-secondary);
+}
+
+.mood-entry-date {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  color: var(--text-tertiary);
+  min-width: 70px;
+}

@@ -1,0 +1,221 @@
+/* ========================================
+   FocusTimer — Styles
+   ======================================== */
+
+.focus-timer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  gap: 20px;
+  padding: 16px 0;
+}
+
+/* SVG Circle */
+
+.ft-circle-container {
+  position: relative;
+  width: 160px;
+  height: 160px;
+}
+
+.ft-circle-svg {
+  width: 160px;
+  height: 160px;
+  transform: rotate(-90deg);
+}
+
+.ft-circle-bg {
+  fill: none;
+  stroke: var(--border);
+  stroke-width: 6;
+}
+
+.ft-circle-progress {
+  fill: none;
+  stroke: var(--accent);
+  stroke-width: 6;
+  stroke-linecap: round;
+  transition: stroke-dashoffset 0.5s ease;
+}
+
+.ft-circle-progress.break {
+  stroke: var(--success);
+}
+
+.ft-time-display {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.ft-time-text {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 28px;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.ft-state-text {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--text-tertiary);
+  margin-top: 4px;
+}
+
+.ft-state-text.focus {
+  color: var(--accent);
+}
+
+.ft-state-text.break {
+  color: var(--success);
+}
+
+/* Work Item Input */
+
+.ft-work-input {
+  width: 100%;
+  max-width: 280px;
+  padding: 10px 14px;
+  background: var(--bg-window);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  font-size: 13px;
+  color: var(--text-primary);
+  text-align: center;
+  transition: border-color 0.2s;
+}
+
+.ft-work-input:focus {
+  border-color: var(--accent-soft);
+}
+
+.ft-work-input::placeholder {
+  color: var(--text-tertiary);
+}
+
+/* Controls */
+
+.ft-controls {
+  display: flex;
+  gap: 10px;
+}
+
+.ft-btn {
+  padding: 10px 24px;
+  font-size: 13px;
+  font-weight: 600;
+  border-radius: var(--radius-sm);
+  transition: all 0.15s;
+}
+
+.ft-btn.start {
+  background: var(--accent);
+  color: #fff;
+}
+
+.ft-btn.start:hover {
+  background: #5B54E8;
+}
+
+.ft-btn.pause {
+  background: var(--warning);
+  color: #0D0D1A;
+}
+
+.ft-btn.pause:hover {
+  opacity: 0.9;
+}
+
+.ft-btn.resume {
+  background: var(--success);
+  color: #0D0D1A;
+}
+
+.ft-btn.resume:hover {
+  opacity: 0.9;
+}
+
+.ft-btn.stop {
+  background: var(--bg-window);
+  color: var(--danger);
+  border: 1px solid var(--border);
+}
+
+.ft-btn.stop:hover {
+  border-color: var(--danger);
+}
+
+/* Session History */
+
+.ft-history {
+  width: 100%;
+  max-width: 320px;
+}
+
+.ft-history-title {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--text-tertiary);
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.ft-history-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  justify-content: center;
+}
+
+.ft-session-chip {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  background: var(--bg-window);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  font-size: 11px;
+  color: var(--text-secondary);
+}
+
+.ft-session-chip.completed {
+  border-color: var(--success);
+  color: var(--success);
+}
+
+.ft-session-chip.interrupted {
+  border-color: var(--danger);
+  color: var(--danger);
+}
+
+/* Settings modal */
+
+.ft-settings-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-sm);
+  color: var(--text-tertiary);
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.ft-settings-btn:hover {
+  background: var(--accent-glow);
+  color: var(--text-secondary);
+}

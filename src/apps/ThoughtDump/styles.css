@@ -1,0 +1,145 @@
+/* ========================================
+   ThoughtDump — Styles
+   ======================================== */
+
+.thought-dump {
+  display: flex;
+  height: 100%;
+  gap: 0;
+}
+
+.thought-input-panel {
+  width: 40%;
+  min-width: 200px;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid var(--border);
+  padding: 16px;
+  gap: 12px;
+}
+
+.thought-textarea {
+  flex: 1;
+  background: var(--bg-window);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 14px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 13px;
+  color: var(--text-primary);
+  resize: none;
+  line-height: 1.6;
+  transition: border-color 0.2s;
+}
+
+.thought-textarea:focus {
+  border-color: var(--accent-soft);
+}
+
+.thought-textarea::placeholder {
+  color: var(--text-tertiary);
+}
+
+.thought-submit-btn {
+  padding: 10px 20px;
+  background: var(--accent);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+  border-radius: var(--radius-sm);
+  transition: all 0.15s;
+  font-family: 'Inter', sans-serif;
+}
+
+.thought-submit-btn:hover {
+  background: #5B54E8;
+}
+
+.thought-submit-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.thought-export-btn {
+  padding: 8px 16px;
+  background: transparent;
+  color: var(--text-secondary);
+  font-size: 12px;
+  font-weight: 500;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  transition: all 0.15s;
+  font-family: 'Inter', sans-serif;
+}
+
+.thought-export-btn:hover {
+  border-color: var(--accent-soft);
+  color: var(--text-primary);
+}
+
+.thought-columns-panel {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  padding: 12px;
+  overflow-y: auto;
+}
+
+.thought-column {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.thought-column-header {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--text-tertiary);
+  padding: 6px 8px;
+  text-align: center;
+  border-bottom: 1px solid var(--border);
+}
+
+.thought-card {
+  background: var(--bg-window);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 10px;
+  font-size: 12px;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  animation: slideUp 0.2s ease forwards;
+}
+
+.thought-card-text {
+  margin-bottom: 6px;
+  color: var(--text-primary);
+  font-size: 12px;
+  line-height: 1.5;
+  word-break: break-word;
+}
+
+.thought-card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.thought-tag {
+  font-size: 10px;
+  padding: 2px 6px;
+  background: var(--accent-glow);
+  color: var(--accent);
+  border-radius: 3px;
+  font-weight: 500;
+}
+
+.thought-card-time {
+  font-size: 10px;
+  color: var(--text-tertiary);
+  margin-top: 4px;
+  font-family: 'JetBrains Mono', monospace;
+}

@@ -1,0 +1,147 @@
+/* ========================================
+   MindOS — Taskbar Styles
+   ======================================== */
+
+#taskbar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 48px;
+  background: rgba(10, 10, 24, 0.9);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-top: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  padding: 0 12px;
+  z-index: 800;
+  gap: 8px;
+}
+
+.taskbar-left {
+  display: flex;
+  align-items: center;
+}
+
+.taskbar-center {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.taskbar-center::-webkit-scrollbar {
+  display: none;
+}
+
+.taskbar-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* ---------- Launcher Button ---------- */
+
+.launcher-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-sm);
+  display: grid;
+  grid-template-columns: repeat(2, 6px);
+  grid-template-rows: repeat(3, 6px);
+  gap: 3px;
+  align-content: center;
+  justify-content: center;
+  transition: background 0.15s;
+  cursor: pointer;
+}
+
+.launcher-btn:hover {
+  background: var(--accent-glow);
+}
+
+.launcher-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--text-secondary);
+  transition: background 0.15s;
+}
+
+.launcher-btn:hover .launcher-dot {
+  background: var(--accent);
+}
+
+/* ---------- App Chip ---------- */
+
+.app-chip {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 12px;
+  border-radius: var(--radius-sm);
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all 0.15s;
+  white-space: nowrap;
+  user-select: none;
+}
+
+.app-chip:hover {
+  background: var(--accent-glow);
+  border-color: var(--accent-soft);
+  color: var(--text-primary);
+}
+
+.app-chip.active {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.app-chip.minimised {
+  opacity: 0.5;
+}
+
+.app-chip-icon {
+  font-size: 14px;
+  line-height: 1;
+}
+
+/* ---------- Clock ---------- */
+
+.taskbar-clock {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-secondary);
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+}
+
+/* ---------- Settings Gear ---------- */
+
+.taskbar-settings {
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-sm);
+  color: var(--text-tertiary);
+  transition: all 0.15s;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.taskbar-settings:hover {
+  background: var(--accent-glow);
+  color: var(--text-secondary);
+}

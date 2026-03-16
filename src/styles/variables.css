@@ -1,0 +1,24 @@
+/* ========================================
+   MindOS — CSS Custom Properties
+   ======================================== */
+
+:root {
+  --bg-desktop:     #0D0D1A;
+  --bg-window:      #12122A;
+  --bg-surface:     #1A1A35;
+  --bg-taskbar:     #0A0A18;
+  --accent:         #6C63FF;
+  --accent-soft:    #4D4A99;
+  --accent-glow:    rgba(108, 99, 255, 0.15);
+  --text-primary:   #E8E8F5;
+  --text-secondary: #9090B0;
+  --text-tertiary:  #505070;
+  --border:         #252545;
+  --success:        #63FFAA;
+  --warning:        #FFD663;
+  --danger:         #FF6363;
+  --radius-sm:      6px;
+  --radius-md:      10px;
+  --radius-lg:      14px;
+  --radius-xl:      20px;
+}
